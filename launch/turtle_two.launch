@@ -9,8 +9,13 @@
   </group>
 
   <group ns="turtle_control">
-    <node pkg="turtle_control" name="turtle_triangle" type="turtle_triangle.py"/>
-    <node pkg="turtle_control" name="turtle_square" type="turtle_square.py"/>
+    <node pkg="turtle_control" name="turtle_triangle" type="turtle_triangle.py">
+      <remap from="/turtle1/cmd_vel" to="/turtle1/turtle1/cmd_vel"/>
+    </node>
+
+    <node pkg="turtle_control" name="turtle_square" type="turtle_square.py">
+      <remap from="/turtle1/cmd_vel" to="/turtle2/turtle1/cmd_vel"/>
+    </node>
   </group>
 
 </launch>

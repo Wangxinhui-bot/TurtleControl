@@ -6,7 +6,7 @@ from math import pi
 
 rospy.init_node('turtle_triangle')
 
-pub = rospy.Publisher('/turtle1/turtle1/cmd_vel', Twist, queue_size = 1)
+pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size = 1)
 rate = rospy.Rate(1)
 
 move_cmd = Twist()
